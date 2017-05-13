@@ -13,8 +13,8 @@ Excel file parser/builder that relies on [js-xlsx](https://github.com/SheetJS/js
 1. Parsing a xlsx from file/buffer, outputs an array of worksheets
 
 ```js
-import xlsx from 'node-xlsx';
-// Or var xlsx = require('node-xlsx').default; 
+import xlsx from 'node-xlsx-formatted-string';
+// Or var xlsx = require('node-xlsx').default;
 
 // Parse a buffer
 const workSheetsFromBuffer = xlsx.parse(fs.readFileSync(`${__dirname}/myFile.xlsx`));
@@ -25,7 +25,7 @@ const workSheetsFromFile = xlsx.parse(`${__dirname}/myFile.xlsx`);
 1. Building a xlsx
 
 ```js
-import xlsx from 'node-xlsx';
+import xlsx from 'node-xlsx-formatted-string';
 // Or var xlsx = require('node-xlsx').default;
 
 const data = [[1, 2, 3], [true, false, null, 'sheetjs'], ['foo', 'bar', new Date('2014-02-19T14:30Z'), '0.3'], ['baz', null, 'qux']];
@@ -63,7 +63,7 @@ Please submit all pull requests the against master branch. If your unit test con
 [Apache License 2.0](https://spdx.org/licenses/Apache-2.0.html)
 
 ```
-Copyright (C) 2012-2014  Olivier Louvignes
+Copyright (C) 2012-2014  Med Lazhari
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
